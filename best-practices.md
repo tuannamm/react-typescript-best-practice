@@ -97,12 +97,7 @@ function Button({ children, onClick, type, specialProp }: Props) {
 type Props = React.ComponentPropsWithoutRef<"button"> & Button;
 
 ```
-## Using short conditional instead of if else
-```jsx
-condition ? exprIfTrue : exprIfFalse;
-condition && exprIfTrue;
-!condition && exprIfFalse;
-```
+
 
 ## Combine events with into a function when they have the same function , use switch case.
 ```jsx
@@ -903,28 +898,6 @@ Use double quotes for JSX attributes and single quotes for all other JS.
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Prop Naming
-
-Always use camelCase for prop names or PascalCase if the prop value is a React component.
-
-**Bad:**
-
-```jsx
-<Component
-  UserName="hello"
-  phone_number={12345678}
-/>
-```
-
-**Good:**
-
-```jsx
-<MyComponent
-  userName="hello"
-  phoneNumber={12345678}
-  Component={SomeComponent}
-/>
-```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -1040,6 +1013,12 @@ const sampleComponent = () => {
 const sampleComponent = () => {
   return isTrue && <p>True!</p>
 };
+
+// or
+condition ? exprIfTrue : exprIfFalse;
+condition && exprIfTrue;
+!condition && exprIfFalse;
+
 ```
 
 <div align="right">
