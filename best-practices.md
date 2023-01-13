@@ -62,13 +62,6 @@ if (false) {
 }
 ```
 
-## Use controlled/uncontrolled in Component
-```jsx
- //controlled/uncontrolled
-  useEffect(() => {
-    setValue(valueProp)
-  }, [valueProp])
-```
 
 ## Do not define children, className, or style ... in component, they are can extends element default.
 ```jsx
@@ -141,7 +134,7 @@ const TYPE_CRON = {
 
 ### Define data is object use: 
 Don’t use object or Object as a type. The object type is currently hard to use (see this issue).
-Consider using Record<string, unknown> instead, as it allows you to more easily inspect and use the keys.
+Consider using Record<string, unknown> instead, as it allows you to more easily inspect and use the keys. <br />
 **Bad:**
 
 ```jsx
@@ -666,7 +659,7 @@ interface MinutesProps {
   config?: ExtendFieldsData
   view?: 'simple' | 'full'
 }
-const Minutes: React.FC<IMinutesProps> = ({ onChange, config: configProp, view, ...restProp }) => {
+const Minutes: React.FC<MinutesProps> = ({ onChange, config: configProp, view, ...restProp }) => {
   // get data from config or default
   const [config, setConfig] = useState<ExtendFieldsData>(configProp)
   const [type, setType] = useState<string | undefined>(configProp?.type)
@@ -898,11 +891,6 @@ Use double quotes for JSX attributes and single quotes for all other JS.
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-
-<div align="right">
-    <b><a href="#">↥ back to top</a></b>
-</div>
-
 ## JSX in Parentheses
 
 If your component spans more than one line, always wrap it in parentheses.
@@ -956,7 +944,7 @@ Do not use underscores in any internal React method.
 **Bad:**
 
 ```jsx
-const _onClickHandler = () => {
+const _handleClickHandler = () => {
   // do stuff
 }
 ```
@@ -964,7 +952,7 @@ const _onClickHandler = () => {
 **Good:**
 
 ```jsx
-const onClickHandler = () => {
+const handleClickHandler = () => {
   // do stuff
 }
 ```
@@ -1049,5 +1037,13 @@ const CustomersMap = () => {
   ....
   return ( ... )
 }
+```
+
+## Use controlled/uncontrolled in Component
+```jsx
+ //controlled/uncontrolled
+  useEffect(() => {
+    setValue(valueProp)
+  }, [valueProp])
 ```
 
