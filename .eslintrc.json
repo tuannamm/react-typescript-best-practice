@@ -47,7 +47,8 @@
     "comma-dangle": [2, "never"],
     "semi": ["error", "always"], // auto add ; end line
     "quotes": [2, "single"],
-    "max-len": ["warn", { "code": 80 }]
+    "max-len": ["warn", { "code": 80 }],
+    "@typescript-eslint/no-implicit-any-catch": "warn"
   },
   "settings": {
     "import/resolver": {
