@@ -1,31 +1,47 @@
 {
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "prettier.configPath": ".prettierrc",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.tslint": true,
-    "source.fixAll.eslint": true
-  },
-  "[typescriptreact]": {
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // JS
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  // JSON
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // Extension: Git
+  "git.rebaseWhenSync": true,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  // Extension: Prettier
+  "prettier.requireConfig": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.arrowParens": "always",
+  "prettier.semi": true,
+  "editor.rulers": [
+    80
+  ],
+  // Extension: ESLint
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true,
+    "source.fixAll.eslint": true,
+    "source.organizeImports": false
   },
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.trimAutoWhitespace": true,
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  // Package manager Configs
+  "eslint.packageManager": "yarn",
+  "npm.packageManager": "yarn",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "typescript.preferences.quoteStyle": "single",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
